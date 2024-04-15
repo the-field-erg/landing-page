@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>The Field</title>
+        <meta name="description" content="Together we are building an engaging and sustainable ecosystem that propels the future of Ergo.">
+        <meta http-equiv="Content-Security-Policy" content="connect-src 'self' https://*.pledger.io https://*.ergoplatform.org https://*.spectrum.fi https://*.crooks-fi.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="preload" href="/fonts/Poppins-Light.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
+    </head>
+    <body>
+    <div id="background"></div>
+        <header class="header">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="https://pledger.io"><h2>The Field</h2></a>
+                </div>
+                <nav class="nav-desktop">
+                    <a href="javascript: scrollToHero();" class="nav-item">Home</a>
+                    <a href="javascript: scrollToMission();" class="nav-item">Mission</a>
+                    <a href="javascript: scrollToTokenomics();" class="nav-item">Tokenomics</a>
+                    <a href="https://the-field.pages.dev/" class="nav-item">Documentation</a>
+                    <a href="https://dex.crooks-fi.com/ergo/swap" class="nav-item" id="nav-cta"><img src="img/swap.svg" alt="swap">Launch App</a>
+                </nav>
+                <nav class="nav-mobile" id="nav-mobile">
+                    <div class="nav-mobile-inner" id="nav-mobile-inner">
+                        <a href="javascript: scrollToHome();" class="nav-item">Home</a>
+                        <a href="javascript: scrollToMission();" class="nav-item">Mission</a>
+                        <a href="javascript: scrollToTokenomics();" class="nav-item">Tokenomics</a>
+                        <a href="https://the-field.pages.dev/" class="nav-item">Documentation</a>
+                        <a href="https://dex.crooks-fi.com/ergo/swap" class="nav-item" id="nav-mobile-cta">Launch App</a>
+                        <div class="social-nav">
+                            <abbr title="Twitter"><a href="https://twitter.com/The Field"><img src="img/twitter.svg" alt="twitter"></a></abbr>
+                            <abbr title="Telegram"><a href="https://t.me/The Field"><img src="img/telegram.svg" alt="telegram"></a></abbr>
+                            <abbr title="Discord"><a href="https://discord.com/channels/"><img src="img/discord.svg" alt="discord"></a></abbr>
+                            <abrr title="Linktree"><a href="https://linktr.ee/The Field"><img src="img/linktree.svg" alt="linktree"></a></abrr>
+                        </div>
+                    </div>
+                </nav>
+                <!-- "Hamburger menu" to show / hide mobile menu -->
+                <a href="javascript:void(0);" alt="menu icon" class="icon" onclick="mobileNav()">
+                    <!-- Create hamburger icon using divs -->
+                    <div class="container" onclick="toggleBars(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                </a>
+            </div>
+        </header>
+        <section class="hero" id="hero">
+            <div class="hero-inner">
+                <div class="hero-inner-col1">
+                    <h1 class="hero-title">Insert strong heading here</h1>
+                    <h2 class="hero-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id libero vel lectus ornare hendrerit. Praesent convallis, nisi eget bibendum interdum, mi nulla facilisis massa, et efficitur dolor ipsum vel nunc.</h2>
+                    <div class="hero-inner-col1-row1">
+                        <a href="https://dex.crooks-fi.com/ergo/swap" class="hero-primary" id="hero-cta"><img src="img/swap.svg" alt="swap">Launch App</a>
+                        <a href="whitepaper.pdf" class="hero-secondary"><img src="img/whitepaper.svg" alt="Whitepaper">Whitepaper</a>
+                    </div>
+                </div>
+                <div class="hero-inner-col2">
+                    <img src="img/smartphone.svg">
+                </div>
+            </div>
+        </section>
+        <section class="mission" id="mission">
+            <h2 class="title">Mission and Vision</h2>
+            <div class="inner">
+                    <div class="row1">
+                        <div class="col1">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nibh sed pulvinar proin gravida hendrerit lectus. Cras tincidunt lobortis feugiat vivamus at augue. Mauris pharetra et ultrices neque ornare aenean. Magna fringilla urna porttitor rhoncus dolor purus non enim. Amet mattis vulputate enim nulla. Suspendisse sed nisi lacus sed. Facilisis leo vel fringilla est ullamcorper. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Massa placerat duis ultricies lacus sed. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Amet tellus cras adipiscing enim eu. Donec enim diam vulputate ut pharetra sit. In hac habitasse platea dictumst quisque sagittis purus. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Eget aliquet nibh praesent tristique.</p>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <p>Rhoncus urna neque viverra justo. Ut etiam sit amet nisl purus in mollis nunc. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Amet purus gravida quis blandit turpis cursus in hac. Vestibulum lectus mauris ultrices eros in cursus turpis. Id semper risus in hendrerit gravida rutrum quisque non tellus. Id nibh tortor id aliquet lectus proin. Enim nec dui nunc mattis enim. Urna neque viverra justo nec ultrices dui sapien. Arcu bibendum at varius vel pharetra vel turpis nunc. Nisi scelerisque eu ultrices vitae auctor eu augue. Urna porttitor rhoncus dolor purus non enim. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Commodo elit at imperdiet dui accumsan sit amet nulla. Nunc vel risus commodo viverra maecenas accumsan lacus. Lectus sit amet est placerat in egestas erat imperdiet. Tortor at auctor urna nunc id cursus metus. Nisl purus in mollis nunc sed id. Lectus urna duis convallis convallis tellus id interdum. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium.</p>
+                    </div>
+            </div>
+        </section>
+        <!--
+        <section class="tokenomics" id="tokenomics">
+            <h2 class="title">Tokenomics</h2>
+            <div class="inner">
+                <div class="col1">
+                    <img src="img/donutchart.svg" loading="lazy" alt="donutchart">
+                </div>
+                <div class="col2">
+                    <div class="row">
+                        <p class="total-supply-title">Total Supply</p>
+                        <p>0</p>
+                    </div>
+                    <div class="row">
+                        <div class="row-left">
+                            <svg class="circle" height="50" width="50">
+                                <circle cx="25" cy="25" r="20" stroke="rgb(255,255,255, 0.6)" stroke-width="1" fill="#fff" />
+                            </svg>
+                            <p>Launch Event</p>
+                        </div>
+                          <p>0</p>
+                    </div>
+                    <div class="row">
+                        <div class="row-left">
+                            <svg class="circle" height="50" width="50">
+                                <circle cx="25" cy="25" r="20" stroke="rgb(255,255,255, 0.6)" stroke-width="1" fill="#fff" />
+                            </svg>
+                            <p>Community</p>
+                        </div>
+                        <p>0</p>
+                    </div>
+                    <div class="row">
+                        <div class="row-left">
+                            <svg class="circle" height="50" width="50">
+                                <circle cx="25" cy="25" r="20" stroke="rgb(255,255,255, 0.6)" stroke-width="1" fill="#fff" />
+                            </svg>
+                            <p>Liquidity</p>
+                        </div>
+                        <p>0</p>
+                    </div>
+                    <div class="col2-row2">
+                        <a href="whitepaper.pdf" class="whitepaper">
+                            <p>Whitepaper
+                                <img src="img/download.svg" alt="download">
+                            </p>
+                        </a>
+                        <p class="lp-info">KYA & DYOR</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
+        <footer>
+            <div class="inner">
+                <div class="row">
+                    <div class="col">
+                        <h3>Ergo Platform</h3>
+                        <ul>
+                            <li><a href="https://ergoplatform.org/en/get-erg/#Wallets">Wallets</a></li>
+                            <li><a href="https://ergoplatform.org/en/get-erg/#Exchanges">Exchanges</a></li>
+                            <li><a href="https://ergoplatform.org/en/ecosystem/">Ecosystem</a></li>
+                            <li><a href="https://ergoplatform.org/en/community/">Community</a></li>
+                            <li><a href="https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/">Manifesto</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                            <h3>Navigation</h3>
+                            <ul class="nav-footer">
+                            <li><a href="javascript: scrollToHero();" class="nav-item">Home</a></li>
+                            <li><a href="javascript: scrollToMission();" class="nav-item">Mission</a></li>
+                            <li><a href="javascript: scrollToTokenomics();" class="nav-item">Tokenomics</a></li>
+                            <li><a href="https://the-field.pages.dev/" class="nav-item">Documentation</a></li>
+                            <li><a href="https://dex.crooks-fi.com/ergo/swap">Launch App</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="whitepaper.pdf">Whitepaper</a></li>
+                            <li><a href="Link2 ">Lectus</a></li>
+                            <li><a href="Link3">Imperdiet</a></li>
+                            <li><a href="Link4">Pretium</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Socials</h3>
+                        <ul>
+                            <li><a href="https://twitter.com/TheField"><img src="img/twitter.svg" alt="twitter" class="social-logo">Twitter</a></li>
+                            <li><a href="https://t.me/TheField"><img src="img/telegram.svg" alt="telegram" class="social-logo">Telegram</a></li>
+                            <li><a href="https://discord.com/channels/"><img src="img/discord.svg" alt="discord" class="social-logo">Discord</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="inner">
+                    <p>Copyright © 2024 The Field</p>
+                </div>
+            </div>
+        </footer>
+        <script src="js/app.js?1"></script>
+        <script src="js/jquery-3.7.0.slim.min.js"></script>
+        <script>
+            /* Sticky header */
+            const header = document.querySelector(".header");
+            const toggleClass = "is-sticky";
+            /* Check scroll position and toggle class */
+            function stickyHeader() {
+                const currentScroll = window.pageYOffset;
+            if (window.scrollY > 130) {
+                header.classList.add(toggleClass);
+            } else {
+                header.classList.remove(toggleClass);
+            }
+            }
+            /* On scroll */
+            window.addEventListener("scroll", () => {
+                stickyHeader()
+            });
+            /* On load */
+            document.addEventListener('DOMContentLoaded', () => {
+                stickyHeader()
+            });
+        </script>
+    </body>
+</html>
