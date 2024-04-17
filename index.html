@@ -1,208 +1,593 @@
+<!-- =========
+
+	Template Name: Play
+	Author: UIdeck
+	Author URI: https://uideck.com/
+	Support: https://uideck.com/support/
+	Version: 1.1
+
+========== -->
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>The Field</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/app.css">
-        <link rel="preload" href="/fonts/Poppins-Light.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/Poppins-Medium.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-        <link rel="preload" href="/fonts/Poppins-Bold.woff2" as="font" type="font/woff2" crossorigin>
-    </head>
-    <body>
-    <div id="background"></div>
-        <header class="header">
-            <div class="header-inner">
-                <div class="logo">
-                    <a href="https://pledger.io"><h2>The Field</h2></a>
-                </div>
-                <nav class="nav-desktop">
-                    <a href="javascript: scrollToHero();" class="nav-item">Home</a>
-                    <a href="javascript: scrollToMission();" class="nav-item">Mission</a>
-                    <a href="javascript: scrollToTokenomics();" class="nav-item">Tokenomics</a>
-                    <a href="https://docs-the-field.pages.dev/" class="nav-item">Documentation</a>
-                    <a href="https://docs-the-field.pages.dev/" class="nav-item" id="nav-cta"><img src="img/swap.svg" alt="swap">Launch App</a>
-                </nav>
-                <nav class="nav-mobile" id="nav-mobile">
-                    <div class="nav-mobile-inner" id="nav-mobile-inner">
-                        <a href="javascript: scrollToHome();" class="nav-item">Home</a>
-                        <a href="javascript: scrollToMission();" class="nav-item">Mission</a>
-                        <a href="javascript: scrollToTokenomics();" class="nav-item">Tokenomics</a>
-                        <a href="https://docs-the-field.pages.dev/" class="nav-item">Documentation</a>
-                        <a href="https://docs-the-field.pages.dev/" class="nav-item" id="nav-mobile-cta">Launch App</a>
-                        <div class="social-nav">
-                            <abbr title="Twitter"><a href="https://twitter.com/The Field"><img src="img/twitter.svg" alt="twitter"></a></abbr>
-                            <abbr title="Telegram"><a href="https://t.me/The Field"><img src="img/telegram.svg" alt="telegram"></a></abbr>
-                            <abbr title="Discord"><a href="https://discord.com/channels/"><img src="img/discord.svg" alt="discord"></a></abbr>
-                            <abrr title="Linktree"><a href="https://linktr.ee/The Field"><img src="img/linktree.svg" alt="linktree"></a></abrr>
-                        </div>
-                    </div>
-                </nav>
-                <!-- "Hamburger menu" to show / hide mobile menu -->
-                <a href="javascript:void(0);" alt="menu icon" class="icon" onclick="mobileNav()">
-                    <!-- Create hamburger icon using divs -->
-                    <div class="container" onclick="toggleBars(this)">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Field</title>
+
+    <!-- Primary Meta Tags -->
+<meta name="title" content="The Field - Free Open Source HTML Bootstrap Template by UIdeck">
+<meta name="description" content="The Field - Free Open Source HTML Bootstrap Template by UIdeck Team">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://uideck.com/play/">
+<meta property="og:title" content="The Field - Free Open Source HTML Bootstrap Template by UIdeck">
+<meta property="og:description" content="The Field - Free Open Source HTML Bootstrap Template by UIdeck Team">
+<meta property="og:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://uideck.com/play/">
+<meta property="twitter:title" content="The Field - Free Open Source HTML Bootstrap Template by UIdeck">
+<meta property="twitter:description" content="The Field - Free Open Source HTML Bootstrap Template by UIdeck Team">
+<meta property="twitter:image" content="https://uideck.com/wp-content/uploads/2021/09/play-meta-bs.jpg">
+
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/svg"
+    />
+
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <link rel="stylesheet" href="assets/css/ud-styles.css" />
+  </head>
+  <body>
+    <!-- ====== Header Start ====== -->
+    <header class="ud-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/logo.svg" alt="Logo" />
+              </a>
+              <button class="navbar-toggler">
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+              </button>
+
+              <div class="navbar-collapse">
+                <ul id="nav" class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#home">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#features">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#faq">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="https://docs-the-field.pages.dev/">Documentation</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="navbar-btn d-none d-sm-inline-block">
+                <a class="ud-main-btn ud-white-btn" href="javascript:void(0)">
+                  Launch App
                 </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ====== Header End ====== -->
+
+    <!-- ====== Hero Start ====== -->
+    <section class="ud-hero" id="home">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 d-flex justify-content-center align-items-center">
+            <div class="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+              <h1 class="ud-hero-title">
+                The Future of Peer-to-Peer Pledging
+              </h1>
+              <p class="ud-hero-desc">
+                Empowering Decentralized Wagering on Sports, Events, Stocks, and More with Ergo's eUTXO Smart Contracts
+              </p>
+              <ul class="ud-hero-buttons">
+                <li>
+                  <a href="https://docs-the-field.pages.dev/" rel="nofollow noopener" target="_blank" class="ud-main-btn ud-white-btn">
+                    Launch App
+                  </a>
+                </li>
+                <li>
+                  <a href="https://docs-the-field.pages.dev/" rel="nofollow noopener" target="_blank" class="ud-main-btn ud-link-btn">
+                    Learn more <i class="lni lni-arrow-right"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-        </header>
-        <section class="hero" id="hero">
-            <div class="hero-inner">
-                <div class="hero-inner-col1">
-                    <h1 class="hero-title">Insert strong heading here</h1>
-                    <h2 class="hero-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id libero vel lectus ornare hendrerit. Praesent convallis, nisi eget bibendum interdum, mi nulla facilisis massa, et efficitur dolor ipsum vel nunc.</h2>
-                    <div class="hero-inner-col1-row1">
-                        <a href="https://docs-the-field.pages.dev/" class="hero-primary" id="hero-cta"><img src="img/swap.svg" alt="swap">Launch App</a>
-                        <a href="whitepaper.pdf" class="hero-secondary"><img src="img/whitepaper.svg" alt="Whitepaper">Whitepaper</a>
-                    </div>
-                </div>
-                <div class="hero-inner-col2">
-                    <img src="img/smartphone.svg">
-                </div>
+            <div
+              class="ud-hero-brands-wrapper wow fadeInUp"
+              data-wow-delay=".3s"
+            >
             </div>
-        </section>
-        <section class="mission" id="mission">
-            <h2 class="title">Mission and Vision</h2>
-            <div class="inner">
-                    <div class="row1">
-                        <div class="col1">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Consectetur purus ut faucibus pulvinar elementum integer enim neque volutpat. Nibh sed pulvinar proin gravida hendrerit lectus. Cras tincidunt lobortis feugiat vivamus at augue. Mauris pharetra et ultrices neque ornare aenean. Magna fringilla urna porttitor rhoncus dolor purus non enim. Amet mattis vulputate enim nulla. Suspendisse sed nisi lacus sed. Facilisis leo vel fringilla est ullamcorper. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Massa placerat duis ultricies lacus sed. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis. Pulvinar etiam non quam lacus suspendisse faucibus interdum posuere. Amet tellus cras adipiscing enim eu. Donec enim diam vulputate ut pharetra sit. In hac habitasse platea dictumst quisque sagittis purus. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Sit amet tellus cras adipiscing enim eu turpis egestas pretium. Eget aliquet nibh praesent tristique.</p>
-                        </div>
-                    </div>
-                    <div class="row2">
-                        <p>Rhoncus urna neque viverra justo. Ut etiam sit amet nisl purus in mollis nunc. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Amet purus gravida quis blandit turpis cursus in hac. Vestibulum lectus mauris ultrices eros in cursus turpis. Id semper risus in hendrerit gravida rutrum quisque non tellus. Id nibh tortor id aliquet lectus proin. Enim nec dui nunc mattis enim. Urna neque viverra justo nec ultrices dui sapien. Arcu bibendum at varius vel pharetra vel turpis nunc. Nisi scelerisque eu ultrices vitae auctor eu augue. Urna porttitor rhoncus dolor purus non enim. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Commodo elit at imperdiet dui accumsan sit amet nulla. Nunc vel risus commodo viverra maecenas accumsan lacus. Lectus sit amet est placerat in egestas erat imperdiet. Tortor at auctor urna nunc id cursus metus. Nisl purus in mollis nunc sed id. Lectus urna duis convallis convallis tellus id interdum. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium.</p>
-                    </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
+              <img src="assets/images/hero/deal.svg" alt="hero-image" />
+              <img
+                src="assets/images/hero/dotted-shape.svg"
+                alt="shape"
+                class="shape shape-1"
+              />
+              <img
+                src="assets/images/hero/dotted-shape.svg"
+                alt="shape"
+                class="shape shape-2"
+              />
             </div>
-        </section>
-        <!--
-        <section class="tokenomics" id="tokenomics">
-            <h2 class="title">Tokenomics</h2>
-            <div class="inner">
-                <div class="col1">
-                    <img src="img/donutchart.svg" loading="lazy" alt="donutchart">
-                </div>
-                <div class="col2">
-                    <div class="row">
-                        <p class="total-supply-title">Total Supply</p>
-                        <p>0</p>
-                    </div>
-                    <div class="row">
-                        <div class="row-left">
-                            <svg class="circle" height="50" width="50">
-                                <circle cx="25" cy="25" r="20" stroke="rgb(255,255,255, 0.6)" stroke-width="1" fill="#fff" />
-                            </svg>
-                            <p>Launch Event</p>
-                        </div>
-                          <p>0</p>
-                    </div>
-                    <div class="row">
-                        <div class="row-left">
-                            <svg class="circle" height="50" width="50">
-                                <circle cx="25" cy="25" r="20" stroke="rgb(255,255,255, 0.6)" stroke-width="1" fill="#fff" />
-                            </svg>
-                            <p>Community</p>
-                        </div>
-                        <p>0</p>
-                    </div>
-                    <div class="row">
-                        <div class="row-left">
-                            <svg class="circle" height="50" width="50">
-                                <circle cx="25" cy="25" r="20" stroke="rgb(255,255,255, 0.6)" stroke-width="1" fill="#fff" />
-                            </svg>
-                            <p>Liquidity</p>
-                        </div>
-                        <p>0</p>
-                    </div>
-                    <div class="col2-row2">
-                        <a href="whitepaper.pdf" class="whitepaper">
-                            <p>Whitepaper
-                                <img src="img/download.svg" alt="download">
-                            </p>
-                        </a>
-                        <p class="lp-info">KYA & DYOR</p>
-                    </div>
-                </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- ====== Hero End ====== -->
+
+    <!-- ====== Features Start ====== -->
+    <section id="features" class="ud-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title">
+              <span>Features</span>
+              <h2>Main Features of The Field</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available
+                but the majority have suffered alteration in some form.
+              </p>
             </div>
-        </section>
-        -->
-        <footer>
-            <div class="inner">
-                <div class="row">
-                    <div class="col">
-                        <h3>Ergo Platform</h3>
-                        <ul>
-                            <li><a href="https://ergoplatform.org/en/get-erg/#Wallets">Wallets</a></li>
-                            <li><a href="https://ergoplatform.org/en/get-erg/#Exchanges">Exchanges</a></li>
-                            <li><a href="https://ergoplatform.org/en/ecosystem/">Ecosystem</a></li>
-                            <li><a href="https://ergoplatform.org/en/community/">Community</a></li>
-                            <li><a href="https://ergoplatform.org/en/blog/2021-04-26-the-ergo-manifesto/">Manifesto</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                            <h3>Navigation</h3>
-                            <ul class="nav-footer">
-                            <li><a href="javascript: scrollToHero();" class="nav-item">Home</a></li>
-                            <li><a href="javascript: scrollToMission();" class="nav-item">Mission</a></li>
-                            <li><a href="javascript: scrollToTokenomics();" class="nav-item">Tokenomics</a></li>
-                            <li><a href="https://docs-the-field.pages.dev/" class="nav-item">Documentation</a></li>
-                            <li><a href="https://docs-the-field.pages.dev/">Launch App</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Links</h3>
-                        <ul>
-                            <li><a href="whitepaper.pdf">Whitepaper</a></li>
-                            <li><a href="Link2 ">Lectus</a></li>
-                            <li><a href="Link3">Imperdiet</a></li>
-                            <li><a href="Link4">Pretium</a></li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <h3>Socials</h3>
-                        <ul>
-                            <li><a href="https://twitter.com/TheField"><img src="img/twitter.svg" alt="twitter" class="social-logo">Twitter</a></li>
-                            <li><a href="https://t.me/TheField"><img src="img/telegram.svg" alt="telegram" class="social-logo">Telegram</a></li>
-                            <li><a href="https://discord.com/channels/"><img src="img/discord.svg" alt="discord" class="social-logo">Discord</a></li>
-                        </ul>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-gift"></i>
+              </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">Free and Open-Source</h3>
+                <p class="ud-feature-desc">
+                  Lorem Ipsum is simply dummy text of the printing and industry.
+                </p>
+                <a href="javascript:void(0)" class="ud-feature-link">
+                  Learn More
+                </a>
+              </div>
             </div>
-            <div class="copyright">
-                <div class="inner">
-                    <p>Copyright © 2024 The Field</p>
-                </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-move"></i>
+              </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">Multipurpose Template</h3>
+                <p class="ud-feature-desc">
+                  Lorem Ipsum is simply dummy text of the printing and industry.
+                </p>
+                <a href="javascript:void(0)" class="ud-feature-link">
+                  Learn More
+                </a>
+              </div>
             </div>
-        </footer>
-        <script src="js/app.js?1"></script>
-        <script src="js/jquery-3.7.0.slim.min.js"></script>
-        <script>
-            /* Sticky header */
-            const header = document.querySelector(".header");
-            const toggleClass = "is-sticky";
-            /* Check scroll position and toggle class */
-            function stickyHeader() {
-                const currentScroll = window.pageYOffset;
-            if (window.scrollY > 130) {
-                header.classList.add(toggleClass);
-            } else {
-                header.classList.remove(toggleClass);
-            }
-            }
-            /* On scroll */
-            window.addEventListener("scroll", () => {
-                stickyHeader()
-            });
-            /* On load */
-            document.addEventListener('DOMContentLoaded', () => {
-                stickyHeader()
-            });
-        </script>
-    </body>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-layout"></i>
+              </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">High-quality Design</h3>
+                <p class="ud-feature-desc">
+                  Lorem Ipsum is simply dummy text of the printing and industry.
+                </p>
+                <a href="javascript:void(0)" class="ud-feature-link">
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6">
+            <div class="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
+              <div class="ud-feature-icon">
+                <i class="lni lni-layers"></i>
+              </div>
+              <div class="ud-feature-content">
+                <h3 class="ud-feature-title">All Essential Elements</h3>
+                <p class="ud-feature-desc">
+                  Lorem Ipsum is simply dummy text of the printing and industry.
+                </p>
+                <a href="javascript:void(0)" class="ud-feature-link">
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Features End ====== -->
+
+    <!-- ====== FAQ Start ====== -->
+    <section id="faq" class="ud-faq">
+      <div class="shape">
+        <img src="assets/images/faq/shape.svg" alt="shape" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <span>FAQ</span>
+              <h2>Any Questions? Answered</h2>
+              <p>
+                There are many variations of passages of Lorem Ipsum available
+                but the majority have suffered alteration in some form.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>How to use UIdeck?</span>
+                </button>
+                <div id="collapseOne" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>How to download icons from Lineicons?</span>
+                </button>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Is GrayGrids part of UIdeck?</span>
+                </button>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Can I use this template for commercial project?</span>
+                </button>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".15s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Do you have plan releasing The Field Pro?</span>
+                </button>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-wow-delay=".2s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Where and how to host this template?</span>
+                </button>
+                <div id="collapseSix" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== FAQ End ====== -->
+
+    <!-- ====== Footer Start ====== -->
+    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
+
+      <div class="ud-footer-widgets">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">About Us</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <a href="javascript:void(0)">Home</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Features</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">About</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Testimonial</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">Features</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <a href="javascript:void(0)">How it works</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Privacy policy</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Terms of service</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0)">Refund policy</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">Our Products</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <a
+                      href="https://lineicons.com/"
+                      rel="nofollow noopner"
+                      target="_blank"
+                      >Lineicons
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ecommercehtml.com/"
+                      rel="nofollow noopner"
+                      target="_blank"
+                      >Ecommerce HTML</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://ayroui.com/"
+                      rel="nofollow noopner"
+                      target="_blank"
+                      >Ayro UI</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://graygrids.com/"
+                      rel="nofollow noopner"
+                      target="_blank"
+                      >Plain Admin</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-3 col-md-6">
+              <div class="ud-widget">
+                <a href="index.html" class="ud-footer-logo">
+                  <img src="assets/images/logo/logo.svg" alt="logo" />
+                </a>
+                <p class="ud-widget-desc">
+                  Decentralized betting with guard-oracles for fair and transparent crypto event pledging.
+                </p>
+                <ul class="ud-widget-socials">
+                  <li>
+                    <a href="https://twitter.com/MusharofChy">
+                      <i class="lni lni-facebook-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/MusharofChy">
+                      <i class="lni lni-twitter-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/MusharofChy">
+                      <i class="lni lni-instagram-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/MusharofChy">
+                      <i class="lni lni-linkedin-original"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ud-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+              <ul class="ud-footer-bottom-left">
+                Copyright 2024 - The Field
+              </ul>
+            </div>
+            <div class="col-md-4">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- ====== Footer End ====== -->
+
+    <!-- ====== Back To Top Start ====== -->
+    <a href="javascript:void(0)" class="back-to-top">
+      <i class="lni lni-chevron-up"> </i>
+    </a>
+    <!-- ====== Back To Top End ====== -->
+
+    <!-- ====== All Javascript Files ====== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".ud-menu-scroll");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document
+              .querySelector(".ud-menu-scroll")
+              .classList.remove("active");
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+    </script>
+  </body>
 </html>
