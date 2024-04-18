@@ -7,16 +7,69 @@
 	Version: 1.0
 
 ======== */
+
+/* ---------- Fonts ---------- */
+
+/* Poppins */
+
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Light.woff2);
+  /*src: url(fonts/Poppins-Light.ttf);*/
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.woff2);
+  /*src: url(fonts/Poppins-Regular.ttf);*/
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Medium.woff2);
+  /*src: url(fonts/Poppins-Medium.ttf);*/
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-SemiBold.woff2);
+  /*src: url(fonts/Poppins-SemiBold.ttf);*/
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Bold.woff2);
+  /*src: url(fonts/Poppins-Bold.ttf);*/
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: Poppins;
+  src: url(fonts/Poppins-ExtraBold.woff2);
+  src: url(fonts/Poppins-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+
+
 /*===========================
   COMMON css 
 ===========================*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
-  --font: "Inter", sans-serif;
-  --body-color: #637381;
-  --heading-color: #212b36;
-  --primary-color: #4051b5;
+  --font: "Poppins", sans-serif;
+  --body-color: #97a6b1;
+  --heading-color: #ffffff;
   --white: #ffffff;
+  --primary-color: #be067e;
+  --primary-hover: #a30a6e;
+  --secondary: #0c7da0;
+  --secondary-hover: #0b6f94;
+  --bg-dark: #060c22;
+  --bg-dark-gradient: #10395f;
 }
 
 body {
@@ -215,9 +268,9 @@ p {
 .sticky {
   position: fixed;
   z-index: 99;
-  background-color: rgba(255, 255, 255, 0.8);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   -webkit-box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.3s ease-out 0s;
@@ -453,21 +506,22 @@ p {
   }
 }
 
+.navbar-btn {
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
 .navbar-btn .ud-main-btn {
   padding: 8px 16px;
   background: transparent;
-}
-
-.navbar-btn .ud-login-btn:hover {
-  opacity: 0.5;
 }
 
 .navbar-btn .ud-white-btn {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.navbar-btn .ud-white-btn:hover {
-  background: white;
+.navbar-btn:hover {
+  background-color: var(--primary-hover);
   color: var(--heading-color);
 }
 
@@ -485,8 +539,8 @@ p {
 }
 
 .sticky .navbar-nav .nav-item a.active, .sticky .navbar-nav .nav-item a:hover {
-  color: var(--primary-color);
   opacity: 1;
+  color: var(--body-color);
 }
 
 .sticky .navbar-btn .ud-main-btn.ud-login-btn {
@@ -509,9 +563,9 @@ p {
 
 /* ===== Hero CSS ===== */
 .ud-hero {
-  background: var(--primary-color);
-  padding-top: 20vh;
-  padding-bottom: 15vh;
+  background: radial-gradient(circle at left top, var(--bg-dark), var(--bg-dark-gradient)) 50% 50%;
+  padding-top: 25vh;
+  padding-bottom: 20vh;
   max-height: 100vh;
 }
 
@@ -599,6 +653,22 @@ p {
   opacity: 0.5;
 }
 
+.ud-primary-button {
+  background-color: var(--primary-color);
+}
+
+.ud-primary-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.ud-secondary-button {
+  background-color: var(--secondary);
+}
+
+.ud-secondary-button:hover {
+  background-color: var(--secondary-hover);
+}
+
 .ud-hero-brands-wrapper {
   text-align: center;
   margin-bottom: 40px;
@@ -648,6 +718,7 @@ p {
 .ud-features {
   padding-top: 120px;
   padding-bottom: 90px;
+  background: radial-gradient(circle at right, var(--bg-dark-gradient) 0%, var(--bg-dark) 100%);
 }
 
 @media (max-width: 767px) {
@@ -674,7 +745,7 @@ p {
   font-size: 42px;
   line-height: 55px;
   text-transform: capitalize;
-  color: var(--heading-color);
+  color: var(--white);
   margin-bottom: 20px;
 }
 
@@ -712,7 +783,7 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 14px;
-  background: var(--primary-color);
+  background: var(--primary-hover);
   font-size: 32px;
   color: var(--white);
   position: relative;
@@ -729,8 +800,8 @@ p {
   top: 0;
   left: 0;
   border-radius: 14px;
-  background: var(--primary-color);
-  opacity: 0.2;
+  background: var(--primary-hover);
+  opacity: 0.4;
   z-index: -1;
   -webkit-transform: rotate(23deg);
   transform: rotate(23deg);
@@ -983,7 +1054,7 @@ p {
 .ud-faq {
   padding-top: 120px;
   padding-bottom: 90px;
-  background: #f3f4fe;
+  background: radial-gradient(circle at left, var(--bg-dark-gradient) 0%, var(--bg-dark) 100%);
   position: relative;
   z-index: 1;
 }
@@ -1003,10 +1074,8 @@ p {
 }
 
 .ud-single-faq {
-  background: var(--white);
-  border: 1px solid #f3f4fe;
-  -webkit-box-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
-          box-shadow: 0px 20px 95px rgba(201, 203, 204, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(225, 255, 255, 1);
   border-radius: 10px;
   margin-bottom: 30px;
 }
@@ -1052,9 +1121,9 @@ p {
           justify-content: center;
   width: 42px;
   height: 42px;
-  background: rgba(48, 86, 211, 0.06);
+  background: var(--primary-hover);
   border-radius: 10px;
-  color: var(--primary-color);
+  color: var(--white);
   margin-right: 24px;
 }
 
@@ -1447,7 +1516,7 @@ p {
 
 /* ===== Footer CSS ===== */
 .ud-footer {
-  background: var(--heading-color);
+  background: var(--bg-dark);
   padding-top: 100px;
   position: relative;
   z-index: 1;
