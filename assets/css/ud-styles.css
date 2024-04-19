@@ -567,7 +567,6 @@ p {
   background: radial-gradient(circle at left top, var(--bg-dark), var(--bg-dark-gradient)) 50% 50%;
   padding-top: 25vh;
   padding-bottom: 20vh;
-  max-height: 100vh;
 }
 
 .ud-hero-content {
@@ -616,18 +615,7 @@ p {
 .ud-hero-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
-}
-
-.ud-hero-buttons .ud-main-btn {
-  margin: 8px;
-  margin-left: 0px;
-}
-
-@media (max-width: 767px) {
-  .ud-hero-buttons .ud-main-btn {
-    margin: 5px;
-    margin-left: 0px;
-  }
+  gap: 35px;
 }
 
 @media (max-width: 767px) {
@@ -708,11 +696,19 @@ p {
 .ud-hero-image .shape.shape-1 {
   bottom: -50px;
   left: 0px;
+  opacity: 0.9
 }
 
 .ud-hero-image .shape.shape-2 {
   top: 0px;
   right: 0px;
+  opacity: 0.9
+}
+
+@media (max-width: 980px) {
+  .ud-hero-image {
+    margin-top: 20px;
+  }
 }
 
 /* ===== Features CSS ===== */
